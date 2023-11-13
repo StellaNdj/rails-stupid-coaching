@@ -1,0 +1,12 @@
+<h1 class="mt-4 ms-4">Stupid Coaching</h1>
+<p class="ms-5 alert alert-light"><%= @questions %>- You</p>
+<p class="ms-5 alert alert-warning d-inline-flex">
+  <%= if @questions === "I am going to work"
+      "#{@answers[0]} - Your coach"
+    elsif @questions.include? "?"
+     "#{@answers[1]} - Your coach"
+    else
+     "#{@answers[2]} - Your coach"
+    end %>
+</p>
+<p class="ms-5"><%= link_to "Ask a new question", ask_path %></p>
